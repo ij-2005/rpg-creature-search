@@ -52,7 +52,7 @@ const findCreature = (input)=>{
         specialName.innerText = data.special.name;
         specialDesc.innerText = data.special.description;
 
-        baseStatus.innerHTML = data.stats.map(stat=> `<p id="${stat.name.replace(/\s+/g, '-').toLowerCase()}">${stat.base_stat}</p>`).join('');
+        baseStatus.innerHTML = data.stats.map(stat=> `<p id="${stat.name.replace(/\s+/g, '-').toLowerCase()}">${stat.name.toUpperCase()}: ${stat.base_stat}</p>`).join('');
    
     })  
     .catch((e)=>{
